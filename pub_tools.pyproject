@@ -1,0 +1,3 @@
+{
+    "files": ["main.ui","pages/base_body.ui","pages/file/view.ui","widget.py"]
+}

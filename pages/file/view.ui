@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>Form</class>
+    <widget class="QWidget" name="Form">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>762</width>
+                <height>542</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Form</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+            <property name="leftMargin">
+                <number>0</number>
+            </property>
+            <property name="topMargin">
+                <number>12</number>
+            </property>
+            <property name="rightMargin">
+                <number>0</number>
+            </property>
+            <property name="bottomMargin">
+                <number>0</number>
+            </property>
+            <item row="0" column="1">
+                <widget class="QStackedWidget" name="right_box">
+                    <property name="styleSheet">
+                        <string notr="true">background-color:rgb(65, 70, 81);border-radius:8px;</string>
+                    </property>
+                    <property name="currentIndex">
+                        <number>1</number>
+                    </property>
+                    <widget class="QWidget" name="page_repl">
+                        <layout class="QGridLayout" name="gridLayout_2">
+                            <item row="0" column="0">
+                                <layout class="QFormLayout" name="repl_layout">
+                                    <property name="fieldGrowthPolicy">
+                                        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                                    </property>
+                                    <property name="rowWrapPolicy">
+                                        <enum>QFormLayout::DontWrapRows</enum>
+                                    </property>
+                                    <property name="labelAlignment">
+                                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                    </property>
+                                    <item row="0" column="0">
+                                        <widget class="QLabel" name="label">
+                                            <property name="text">
+                                                <string>选择文件夹</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="0" column="1">
+                                        <layout class="QGridLayout" name="gridLayout_4">
+                                            <item row="0" column="0">
+                                                <widget class="QLineEdit" name="repl_folder_path"/>
+                                            </item>
+                                            <item row="0" column="1">
+                                                <widget class="QPushButton" name="repl_sel_folder">
+                                                    <property name="text">
+                                                        <string>选择</string>
+                                                    </property>
+                                                </widget>
+                                            </item>
+                                        </layout>
+                                    </item>
+                                    <item row="1" column="0">
+                                        <widget class="QLabel" name="label_5">
+                                            <property name="text">
+                                                <string>文件类型</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="2" column="0">
+                                        <widget class="QLabel" name="label_2">
+                                            <property name="text">
+                                                <string>查找字符串</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="2" column="1">
+                                        <widget class="QLineEdit" name="repl_find_str"/>
+                                    </item>
+                                    <item row="3" column="0">
+                                        <widget class="QLabel" name="label_3">
+                                            <property name="text">
+                                                <string>替换字符串</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="3" column="1">
+                                        <widget class="QLineEdit" name="repl_repl_str"/>
+                                    </item>
+                                    <item row="4" column="0">
+                                        <widget class="QLabel" name="label_4">
+                                            <property name="text">
+                                                <string>包含子目录</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="5" column="1">
+                                        <widget class="QPushButton" name="repl_btn_push">
+                                            <property name="text">
+                                                <string>批 量 替 换</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="1" column="1">
+                                        <layout class="QHBoxLayout" name="repl_type_layout">
+                                            <item>
+                                                <widget class="QRadioButton" name="repl_type_all">
+                                                    <property name="text">
+                                                        <string>所有</string>
+                                                    </property>
+                                                    <attribute name="buttonGroup">
+                                                        <string notr="true">repl_type_group</string>
+                                                    </attribute>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QRadioButton" name="repl_type_video">
+                                                    <property name="text">
+                                                        <string>视频</string>
+                                                    </property>
+                                                    <attribute name="buttonGroup">
+                                                        <string notr="true">repl_type_group</string>
+                                                    </attribute>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QRadioButton" name="repl_type_audio">
+                                                    <property name="text">
+                                                        <string>音频</string>
+                                                    </property>
+                                                    <attribute name="buttonGroup">
+                                                        <string notr="true">repl_type_group</string>
+                                                    </attribute>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QRadioButton" name="repl_type_file">
+                                                    <property name="text">
+                                                        <string>文本</string>
+                                                    </property>
+                                                    <property name="checked">
+                                                        <bool>true</bool>
+                                                    </property>
+                                                    <attribute name="buttonGroup">
+                                                        <string notr="true">repl_type_group</string>
+                                                    </attribute>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QRadioButton" name="repl_type_img">
+                                                    <property name="text">
+                                                        <string>图片</string>
+                                                    </property>
+                                                    <attribute name="buttonGroup">
+                                                        <string notr="true">repl_type_group</string>
+                                                    </attribute>
+                                                </widget>
+                                            </item>
+                                        </layout>
+                                    </item>
+                                    <item row="4" column="1">
+                                        <widget class="QCheckBox" name="repl_is_while">
+                                            <property name="text">
+                                                <string>是</string>
+                                            </property>
+                                            <property name="checked">
+                                                <bool>true</bool>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                </layout>
+                            </item>
+                        </layout>
+                    </widget>
+                    <widget class="QWidget" name="page_unzip">
+                        <layout class="QGridLayout" name="gridLayout_3">
+                            <item row="0" column="0">
+                                <layout class="QFormLayout" name="formLayout_3">
+                                    <property name="fieldGrowthPolicy">
+                                        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                                    </property>
+                                    <item row="0" column="0">
+                                        <widget class="QLabel" name="label_6">
+                                            <property name="text">
+                                                <string>选择文件夹</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="0" column="1">
+                                        <layout class="QHBoxLayout" name="horizontalLayout">
+                                            <item>
+                                                <widget class="QLineEdit" name="unzip_folder_path"/>
+                                            </item>
+                                            <item>
+                                                <widget class="QPushButton" name="unzip_sel_folder">
+                                                    <property name="text">
+                                                        <string>选择</string>
+                                                    </property>
+                                                </widget>
+                                            </item>
+                                        </layout>
+                                    </item>
+                                    <item row="1" column="0">
+                                        <widget class="QLabel" name="label_9">
+                                            <property name="text">
+                                                <string>目标文件夹</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="1" column="1">
+                                        <layout class="QHBoxLayout" name="horizontalLayout_2">
+                                            <item>
+                                                <widget class="QLineEdit" name="unzip_target_path">
+                                                    <property name="placeholderText">
+                                                        <string>为空则与源文件在同一目录</string>
+                                                    </property>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QPushButton" name="unzip_target_folder">
+                                                    <property name="text">
+                                                        <string>选择</string>
+                                                    </property>
+                                                </widget>
+                                            </item>
+                                        </layout>
+                                    </item>
+                                    <item row="2" column="0">
+                                        <widget class="QLabel" name="label_7">
+                                            <property name="text">
+                                                <string>解压密码列表</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="2" column="1">
+                                        <widget class="QTextEdit" name="unzip_passes"/>
+                                    </item>
+                                    <item row="3" column="0">
+                                        <widget class="QLabel" name="label_8">
+                                            <property name="text">
+                                                <string>包含子目录</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="3" column="1">
+                                        <widget class="QCheckBox" name="unzip_is_while">
+                                            <property name="text">
+                                                <string>是</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="4" column="0">
+                                        <widget class="QLabel" name="label_10">
+                                            <property name="text">
+                                                <string>删除源文件</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="4" column="1">
+                                        <widget class="QCheckBox" name="unzip_del_source">
+                                            <property name="text">
+                                                <string>是</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                    <item row="5" column="1">
+                                        <widget class="QPushButton" name="unzip_btn_push">
+                                            <property name="text">
+                                                <string>批 量 解 压</string>
+                                            </property>
+                                        </widget>
+                                    </item>
+                                </layout>
+                            </item>
+                        </layout>
+                    </widget>
+                </widget>
+            </item>
+            <item row="0" column="0" alignment="Qt::AlignTop">
+                <widget class="QWidget" name="left_box" native="true">
+                    <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="contextMenuPolicy">
+                        <enum>Qt::DefaultContextMenu</enum>
+                    </property>
+                    <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout">
+                        <property name="sizeConstraint">
+                            <enum>QLayout::SetDefaultConstraint</enum>
+                        </property>
+                        <property name="leftMargin">
+                            <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                            <number>0</number>
+                        </property>
+                        <item alignment="Qt::AlignTop">
+                            <widget class="QPushButton" name="btn_repl">
+                                <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>文件名替换</string>
+                                </property>
+                                <attribute name="buttonGroup">
+                                    <string notr="true">left_btn_group</string>
+                                </attribute>
+                            </widget>
+                        </item>
+                        <item alignment="Qt::AlignTop">
+                            <widget class="QPushButton" name="btn_unzip">
+                                <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>批量解压缩</string>
+                                </property>
+                                <attribute name="buttonGroup">
+                                    <string notr="true">left_btn_group</string>
+                                </attribute>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+        </layout>
+    </widget>
+    <resources/>
+    <connections/>
+    <buttongroups>
+        <buttongroup name="repl_type_group"/>
+        <buttongroup name="left_btn_group"/>
+    </buttongroups>
+</ui>
